@@ -25,7 +25,16 @@
 
 #if !defined(_SPANDSP_V150_1_H_)
 #define _SPANDSP_V150_1_H_
-
+#if defined(__clang__)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc11-extensions" // C11 extension used: nameless struct/union
+#endif
+/*
+ * 参考  https://github.com/AOMediaCodec/libavif/commit/7b9248425cff200d9db08a95381ead5a5aa7f41b
+ */
+#if defined(__clang__)
+#pragma clang diagnostic pop
+#endif
 /* Structure passed with status reports */
 typedef struct
 {
