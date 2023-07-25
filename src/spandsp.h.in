@@ -27,6 +27,10 @@
 
 #if !defined(_SPANDSP_H_)
 #define _SPANDSP_H_
+#if defined(__clang__)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc11-extensions" // C11 extension used: nameless struct/union
+#endif
 
 @SPANDSP_USE_FIXED_POINT@
 @SPANDSP_MISALIGNED_ACCESS_FAILS@
@@ -145,6 +149,9 @@
 #include <spandsp/playout.h>
 #include <spandsp/sprt.h>
 #include <spandsp/v150_1.h>
+#if defined(__clang__)
+#pragma clang diagnostic pop
+#endif
 #include <spandsp/v150_1_sse.h>
 
 #endif
