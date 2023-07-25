@@ -25,7 +25,6 @@
 
 #if !defined(_SPANDSP_V150_1_H_)
 #define _SPANDSP_V150_1_H_
-
 /* Structure passed with status reports */
 typedef struct
 {
